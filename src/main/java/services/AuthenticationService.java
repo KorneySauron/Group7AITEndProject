@@ -32,4 +32,16 @@ public class AuthenticationService {
   public static boolean authenticate(String email, String password) {
     return users.containsKey(email) && users.get(email).equals(password);
   }
+
+  /**
+   * Вход пользователя в систему.
+   *
+   * @param email Электронная почта пользователя.
+   * @param password Пароль пользователя.
+   * @return Статус входа в систему.
+   */
+  public static boolean login(String email, String password) {
+    // Проверка наличия пользователя с таким email и паролем
+    return authenticate(email, password);
+  }
 }
