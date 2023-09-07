@@ -20,14 +20,14 @@ public class AdvertsController implements AdvertsApi {
     AdvertsService advertsService;
 
     @Override
-    public ResponseEntity<AdvertDto> addAdvert(NewAdvertDto newCourse) {
+    public ResponseEntity<AdvertDto> addAdvert(NewAdvertDto newAdvert) {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(advertsService.addAdvert(newAdvert));
     }
 
     @Override
-    public ResponseEntity<AdvertDto> updateCourse(Long advertId, UpdateAdvertDto updateAdvert) {
+    public ResponseEntity<AdvertDto> updateAdvert(Long advertId, UpdateAdvertDto updateAdvert) {
         return ResponseEntity
                 .ok()
                 .body(advertsService.updateAdvert(advertId, updateAdvert));

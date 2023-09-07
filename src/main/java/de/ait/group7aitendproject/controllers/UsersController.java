@@ -3,6 +3,7 @@ package de.ait.group7aitendproject.controllers;
 import de.ait.group7aitendproject.controllers.api.UsersApi;
 import de.ait.group7aitendproject.dto.UserDto;
 import de.ait.group7aitendproject.security.details.AuthenticatedUser;
+import de.ait.group7aitendproject.services.UsersService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;

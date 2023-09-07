@@ -15,17 +15,17 @@ import javax.validation.Valid;
 public interface AdvertsApi {
     @PreAuthorize("hasAnyAuthority('MANAGER', 'ADMIN')")
     @PostMapping
-    ResponseEntity<AdvertDto> addAdvert(@RequestBody @Valid NewAdvertDto newCourse);
+    ResponseEntity<AdvertDto> addAdvert(@RequestBody @Valid NewAdvertDto newAdvert);
 
     @PreAuthorize("hasAnyAuthority('MANAGER', 'ADMIN')")
-    @PutMapping("/{course-id}")
-    ResponseEntity<AdvertDto> updateAdvert(@PathVariable("advert-id") Long courseId,
-                                           @RequestBody @Valid UpdateAdvertDto updateCourse);
+    @PutMapping("/{advert-id}")
+    ResponseEntity<AdvertDto> updateAdvert(@PathVariable("advert-id") Long advertId,
+                                           @RequestBody @Valid UpdateAdvertDto updateAdvert);
 
 
 
     @PreAuthorize("isAuthenticated()")
-    @GetMapping("/{course-id}")
+    @GetMapping("/{advert-id}")
     ResponseEntity<AdvertDto> getAdvert(@PathVariable("advert-id") Long advertId);
 
     @PreAuthorize("isAuthenticated()")

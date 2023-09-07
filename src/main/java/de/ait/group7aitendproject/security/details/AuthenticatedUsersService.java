@@ -15,10 +15,10 @@ public class AuthenticatedUsersService implements UserDetailsService {
     private final UsersRepository usersRepository;
 
     @Override
-    public UserDetails loadUserByUsername(Long id) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
         return new AuthenticatedUser(
-                usersRepository.findById(id)
+                usersRepository.findByName(name)
                         .orElseThrow(() ->
-                                new UsernameNotFoundException("User with email <" + id + "> not found ")));
+                                new UsernameNotFoundException("User with email <" + name + "> not found ")));
     }
 }

@@ -35,7 +35,10 @@ public class AuthenticatedUser implements UserDetails {
         return user.getHashPassword();
     }
 
-
+    @Override
+    public String getUsername() {
+        return user.getName();
+    }
     @Override
     public boolean isAccountNonExpired() {
         return true;

@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 
-@EqualsAndHashCode(of = {"id", "email"})
+@EqualsAndHashCode(of = {"id", "name"})
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -37,6 +37,9 @@ public class User {
     @Column(nullable = false)
     @Enumerated(value = EnumType.STRING)
     private State state;
+
+    @Column(nullable = false, unique = true)
+    private String name;
 
 
     @Column(nullable = false)

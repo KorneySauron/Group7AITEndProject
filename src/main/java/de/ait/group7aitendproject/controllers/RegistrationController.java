@@ -1,5 +1,9 @@
 package de.ait.group7aitendproject.controllers;
 
+import de.ait.group7aitendproject.controllers.api.RegistrationApi;
+import de.ait.group7aitendproject.dto.RegisterDto;
+import de.ait.group7aitendproject.dto.UserDto;
+import de.ait.group7aitendproject.services.RegistrationService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
