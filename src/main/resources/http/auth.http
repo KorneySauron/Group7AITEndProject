@@ -1,0 +1,17 @@
+### Регистрация Марселя
+
+POST http://localhost:8080/api/register
+Content-Type: application/json
+
+{
+  "password": "Qwerty007!"
+}
+
+### Регистрация Алишера
+
+POST http://localhost:8080/api/register
+Content-Type: application/json
+
+{
+  "password": "Qwerty008!"
+}

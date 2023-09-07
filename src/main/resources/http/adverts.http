@@ -1,0 +1,11 @@
+### Добавление объявления "Работа электриком"
+
+POST localhost:8080/api/adverts
+Content-Type: application/json
+
+{
+  "title": "Работа электриком",
+  "description": "Предлагаю работу электрика",
+  "startDate": "2023-02-03",
+  "finishDate": "2023-03-02"
+}
